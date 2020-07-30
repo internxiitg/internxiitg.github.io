@@ -44,11 +44,12 @@ class App extends React.Component {
         </div>
 
         <UpperFeed />
-
+        <Feed />
+        
         <div className='footer-box unselectable'>
           The Internship Experience ©
       </div>
-      <Feed />
+      
       </Router>
     );
   }

@@ -26,7 +26,7 @@ class UpperFeed extends React.Component {
           <div className="up2-content"><div className="up2-title">A typical day in the life of a Microsoft Intern</div></div>
           <div className="up2-author-date row">
               <div className="up2-author col-8" >
-                John Smith
+                By John Smith
               </div>
               <div className="up2-date col">
                 22 March 2020
@@ -39,7 +39,7 @@ class UpperFeed extends React.Component {
             </div>
             <div className="up2-author-date row">
               <div className="up2-author col-8" >
-                John Smith
+                By John Smith
               </div>
               <div className="up2-date col">
                 22 March 2020
