@@ -31,10 +31,10 @@ function App() {
           <div className="empty-container"></div>
           </div>
           <div className='header-buttons container'>
-          <button className='button2019'>
+          <button className='button1 button2019'>
             2019
           </button>
-          <button className='button2020'>
+          <button className='button1 button2020'>
             2020
           </button>
           </div>
