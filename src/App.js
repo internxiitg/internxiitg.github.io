@@ -9,22 +9,12 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className='navclass container-fluid'>
-          <div className='row'>
-            <div className='col-2'>
-            </div>
-            <div className='col-6'>
-
-            </div>
-            <div className='col-2'>
+        <div className='navclass container-fluid'>   
+            <div className='navlink-container'>
               <Link to='/' className='navlinks unselectable mr-4'>Home</Link>
               <Link to='/' className='navlinks unselectable'>About</Link>
             </div>
-            <div className='col'>
-
-            </div>
           </div>
-        </div>
         <div className="header-box container-fluid unselectable">
           <div className="header-container">
             <div className="header-title-intro">
@@ -45,7 +35,7 @@ class App extends React.Component {
 
         <UpperFeed />
         <Feed />
-        
+
         <div className='footer-box unselectable'>
           The Internship Experience ©
       </div>
