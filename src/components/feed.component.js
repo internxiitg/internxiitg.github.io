@@ -10,20 +10,28 @@ function removeTags(str) {
     return str.replace(/(<([^>]+)>)/ig, '');
 }
 
-const FeedCard = props => (
+const FeedCard = props =>{ 
+    
+    var shortMonthName = new Intl.DateTimeFormat('en-US', {
+        month: 'short'
+      }).format;
+      let date = new Date(props.post.pubDate);
+      const publishDate = shortMonthName(date) + ' ' + date.getDate() + ',' + ' ' + date.getFullYear();
+    
+    return (
     <a class='feedbox-links' href={props.post.link}><div className="feed-box">
         <div className="feedbox-content">
             <div className="feedbox-title">{props.post.title}</div>
             <div className="feedbox-desc">{removeTags(props.post.content).substring(0, 400) + "...."}</div>
             <div className="feedbox-author-date">
                 <div className="feedbox-author">{props.post.author}</div>
-                <div className="feedbox-date">15 March 2020</div>
+            <div className="feedbox-date">{publishDate}</div>
             </div>
         </div>
         <div className="feedbox-image" style={{ backgroundImage: 'url(' + props.post.thumbnail + ')' }}></div>
     </div>
     </a>
-)
+)}
 
 class Feed extends React.Component {
 

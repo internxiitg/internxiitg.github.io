@@ -508,6 +508,7 @@ code {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     border-top: 1px solid lightgrey;
+    margin-bottom: -30px;
   }
 }
 
@@ -699,7 +700,7 @@ code {
 
 @media only screen and (min-width: 600px) {
   .feedbox-author-date {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
   }
 }
