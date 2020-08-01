@@ -11,7 +11,7 @@ function removeTags(str) {
 }
 
 const FeedCard = props => (
-    <div className="feed-box">
+    <a class='feedbox-links' href={props.post.link}><div className="feed-box">
         <div className="feedbox-content">
             <div className="feedbox-title">{props.post.title}</div>
             <div className="feedbox-desc">{removeTags(props.post.content).substring(0, 400) + "...."}</div>
@@ -22,6 +22,7 @@ const FeedCard = props => (
         </div>
         <div className="feedbox-image" style={{ backgroundImage: 'url(' + props.post.thumbnail + ')' }}></div>
     </div>
+    </a>
 )
 
 class Feed extends React.Component {

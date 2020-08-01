@@ -644,6 +644,7 @@ code {
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
+    color:black;
   }
 }
 
@@ -652,7 +653,17 @@ code {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: black;
   }
+}
+
+.feedbox-links{
+  color: black;
+}
+.feedbox-links:hover{
+  text-decoration: none;
+  color: black;
+
 }
 
 @media only screen and (max-width: 600px) {

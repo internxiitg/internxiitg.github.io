@@ -60,9 +60,9 @@ class UpperFeed extends React.Component {
     return (<div className="container">
 
       <div className="upperfeed-box unselectable">
-
-        <div className="up-1">
-          <div className="up1-image" style={{ backgroundImage: 'url(' + this.state.post1.thumbnail + ')' }}></div>
+        <div className="up-1">    
+          <div onClick={e=>(window.location=this.state.post1.link)} className="up1-image" style={{ backgroundImage: 'url(' + this.state.post1.thumbnail + ')' }}></div>
+          <a class='feedbox-links' href={this.state.post1.link}>
           <div className="up1-content">
           <div className="up1-title">{this.state.post1.title}</div>
             <div className="up1-author">{this.state.post1.author}</div>
@@ -72,9 +72,12 @@ class UpperFeed extends React.Component {
               <div className="up1-date">31 March 2020</div>
             </div>
           </div>
+          </a>
         </div>
+
         <div className="up-2">
-          <div className="up2-image" style={{ backgroundImage: 'url(' + this.state.post2.thumbnail + ')' }}></div>
+          <div onClick={e=>(window.location=this.state.post2.link)} className="up2-image" style={{ backgroundImage: 'url(' + this.state.post2.thumbnail + ')' }}></div>
+          <a class='feedbox-links' href={this.state.post2.link}>
           <div className="up2-content"><div className="up2-title">{this.state.post2.title}</div>
             <div className="up2-desc">{removeTags(this.state.post2.content).substring(0, 300) + "...."}</div>
           </div>
@@ -86,10 +89,12 @@ class UpperFeed extends React.Component {
               22 March 2020
               </div>
           </div>
+          </a>
         </div>
-
+        
         <div className="up-2">
-          <div className="up2-image" style={{ backgroundImage: 'url(' + this.state.post3.thumbnail + ')' }}></div>
+          <div onClick={e=>(window.location=this.state.post3.link)} className="up2-image" style={{ backgroundImage: 'url(' + this.state.post3.thumbnail + ')' }}></div>
+          <a class='feedbox-links' href={this.state.post3.link}>
           <div className="up2-content"><div className="up2-title">{this.state.post3.title}</div>
             <div className="up2-desc">{removeTags(this.state.post3.content).substring(0, 300) + "...."}</div>
           </div>
@@ -101,6 +106,7 @@ class UpperFeed extends React.Component {
               22 March 2020
               </div>
           </div>
+          </a>
         </div>
 
       </div>
