@@ -15,6 +15,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.feedbox-links{
+  color: black;
+}
+.feedbox-links:hover{
+  text-decoration: none;
+  color: black;
+
+}
+
 .footer-box {
   bottom: 0;
   left: 0;
