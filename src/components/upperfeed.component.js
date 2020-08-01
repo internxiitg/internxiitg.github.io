@@ -73,7 +73,7 @@ class UpperFeed extends React.Component {
 
   componentDidMount() {
     axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fthe-internship-experience-iit-guwahati')
-      .then(response => {
+    .then(response => {
         this.setState({ post1: response.data.items[0], post2:response.data.items[1], post3: response.data.items[2] });
       }).catch(err => {
         console.log(err);
