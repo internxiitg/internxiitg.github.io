@@ -1,62 +1,71 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
+import ShortenText from '../utils/ShortenText';
+import ToText from '../utils/ToText';
+import MediumCard1 from './MediumCard1';
+import MediumCard2 from './MediumCard2';
+import { Col, Row } from 'shards-react';
 
-class UpperFeed extends React.Component {
+class Feed extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
+        this.state = { itemRows: [], avatar: '', profileLink: '' };
     }
+    mediumURL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fthe-internship-experience-iit-guwahati';
+    componentDidMount() {
+    fetch(this.mediumURL)
+      .then(res => res.json())
+      .then(data => {
+        
+        const avatar = data.feed.image;
+        const profileLink = data.feed.link;
+        const res = data.items; 
+        const posts = res.filter(item => item.categories.length > 0);
+
+        this.setState({ avatar: avatar, profileLink: profileLink });
+        const itemRows = [];
+        posts.forEach((item, i) => {
+          item['avatar'] = this.state.avatar; 
+          item['profilelink'] = this.state.profileLink; 
+          const row = Math.floor(i);
+          if (!itemRows[row]) itemRows[row] = [];
+          itemRows[row].push(item);
+        });
+        this.setState({ itemRows: itemRows });
+        console.log(itemRows);
+      });
+  }
     render() {
-        return (<div className="container">
-
-        <div className="upperfeed-box unselectable">
-
-          <div className="up-1">
-            <div className="up1-image" style={{backgroundImage: 'url('+'https://studyabroad.shiksha.com/mediadata/images/articles/university-of-pennsylvania-picture-id594949892.jpg' + ')'}}></div>
-            <div className="up1-content">
-              <div className="up1-title">An Adventure Abroad - University of Pennsylvania</div>
-              <div className="up1-author">By John Smith</div>
-              <div className="up1-desc">Are you interested in a research-related career, a PhD, or studying abroad? Are you unsure of your interests or career direction? My experiences preceding and including my internship at the University of Pennsylvania, in Philadelphia, PA, USA may shed light and help guide you in making your decisions.</div>
-              <div className="up1-author-date">
-              <div className="up1-author2">By John Smith</div>
-              <div className="up1-date">31 March 2020</div>
-              </div>
-            </div>
-          </div>
-          <div className="up-2">
-          <div className="up2-image" style={{backgroundImage: 'url('+'https://www.teektalks.com/wp-content/uploads/2018/03/Microsoft.jpg' + ')'}}></div>
-          <div className="up2-content"><div className="up2-title">A typical day in the life of a Microsoft Intern</div>
-          <div className="up2-desc">Are you interested in a research-related career, a PhD, or studying abroad? Are you unsure of your interests or career direction? My experiences preceding and including my internship at the University of Pennsylvania, in Philadelphia, PA, USA may shed light and help guide you in making your decisions.</div>
-          </div>
-          <div className="up2-author-date">
-              <div className="up2-author" >
-                By John Smith
-              </div>
-              <div className="up2-date">
-                22 March 2020
-              </div>
-            </div>
-          </div>
-
-          <div className="up-2">
-          <div className="up2-image" style={{backgroundImage: 'url('+'https://www.impossible.sg/wp-content/uploads/2018/05/Google-Digital-Marketing.jpg' + ')'}}></div>
-            <div className="up2-content"><div className="up2-title">How I made it to google, twice!</div>
-            <div className="up2-desc">Are you interested in a research-related career, a PhD, or studying abroad? Are you unsure of your interests or career direction? My experiences preceding and including my internship at the University of Pennsylvania, in Philadelphia, PA, USA may shed light and help guide you in making your decisions.</div>
-            </div>
-            <div className="up2-author-date">
-              <div className="up2-author" >
-                By John Smith
-              </div>
-              <div className="up2-date">
-                22 March 2020
-              </div>
-            </div>
-          </div>
-
+        return (
+          <div className="container">
+            
+            <div className="upperfeed-box unselectable">
+           
+                {this.state.itemRows.slice(0,1).map((row, i) => (
+                    <Row key={i}>
+                    {row.map((item, j) => (
+                        <Col key={j}>
+                            <MediumCard1 {...item} />
+                        </Col>
+                    ))}
+                    </Row>
+                ))}
+                    
+                    
+                    {this.state.itemRows.slice(1,3).map((row, i) => (
+                    <Row key={i}>
+                    {row.map((item, j) => (
+                        <Col key={j}>
+                            <MediumCard2 {...item} />
+                        </Col>
+                    ))}
+                    </Row>
+                ))}
+                
         </div>
-
-      </div>);
+        </div>);
     }
 }
 
-export default UpperFeed;
+export default Feed;
