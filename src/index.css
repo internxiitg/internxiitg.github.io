@@ -16,14 +16,7 @@ code {
 }
 
 .footer-box {
-  b.feedbox-links {
-    color: black;
-  }
-  .feedbox-links:hover {
-    text-decoration: none;
-    color: black;
-  }
-  ottom: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 60px;
