@@ -15,17 +15,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.feedbox-links{
-  color: black;
-}
-.feedbox-links:hover{
-  text-decoration: none;
-  color: black;
-
-}
-
 .footer-box {
-  bottom: 0;
+  b.feedbox-links {
+    color: black;
+  }
+  .feedbox-links:hover {
+    text-decoration: none;
+    color: black;
+  }
+  ottom: 0;
   left: 0;
   right: 0;
   height: 60px;
@@ -112,10 +110,23 @@ code {
   text-decoration: none;
 }
 
-.header-box {
-  padding-top: 100px;
-  padding-bottom: 30px;
-  background-color: #353b48;
+@media only screen and (min-width: 600px) {
+  .header-box {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background-image: url('https://i.imgur.com/V38DezE.png');
+    background-size: cover;
+    border-bottom: 1px solid grey;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-box {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background-color: #6ED974;
+    border-bottom: 1px solid grey;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -155,8 +166,8 @@ code {
   .title-header {
     font-weight: bold;
     font-size: 32px;
-    color: white;
     text-align: center;
+    color: #1e272e;
   }
 }
 
@@ -164,23 +175,23 @@ code {
   .title-header {
     font-weight: bold;
     font-size: 32px;
-    color: white;
+    color: #1e272e;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .intro-header {
-    color: white;
     font-size: 16px;
     text-align: center;
     margin-top: -14px;
+    color: #1e272e;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .intro-header {
-    color: white;
     font-size: 16px;
+    color: #1e272e;
   }
 }
 
@@ -396,7 +407,6 @@ code {
   .up1-author2 {
     display: inline-block;
     width: 50%;
-
   }
   .up1-date {
     display: inline-block;
@@ -654,7 +664,7 @@ code {
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    color:black;
+    color: black;
   }
 }
 
@@ -667,13 +677,13 @@ code {
   }
 }
 
-.feedbox-links{
+.feedbox-links {
   color: black;
 }
-.feedbox-links:hover{
+
+.feedbox-links:hover {
   text-decoration: none;
   color: black;
-
 }
 
 @media only screen and (max-width: 600px) {

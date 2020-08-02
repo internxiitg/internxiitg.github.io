@@ -33,7 +33,7 @@ class App extends React.Component {
 
     return (
       <Router>
-        <div className='navclass container-fluid'>   
+        <div className='navclass container-fluid'>  
             <div className='navlink-container'>
               <Link to='/' className='navlinks unselectable mr-4'>Home</Link>
               <Link to='/' className='navlinks unselectable'>About</Link>

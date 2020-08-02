@@ -1,14 +1,9 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
+import ShortenText from '../utils/ShortenText';
+import ToText from '../utils/ToText';
 
-function removeTags(str) {
-    if ((str === null) || (str === ''))
-        return 'Loading Content...';
-    else
-        str = str.toString();
-    return str.replace(/(<([^>]+)>)/ig, '');
-}
 
 const FeedCard = props =>{ 
     
@@ -21,8 +16,8 @@ const FeedCard = props =>{
     return (
     <a class='feedbox-links' href={props.post.link}><div className="feed-box">
         <div className="feedbox-content">
-            <div className="feedbox-title">{props.post.title}</div>
-            <div className="feedbox-desc">{removeTags(props.post.content).substring(0, 400) + "...."}</div>
+            <div className="feedbox-title">{ShortenText(props.post.title, 0, 50)}</div>
+            <div className="feedbox-desc">{ShortenText(ToText(props.post.content), 0, 320) + '...'}</div>
             <div className="feedbox-author-date">
                 <div className="feedbox-author">{props.post.author}</div>
             <div className="feedbox-date">{publishDate}</div>

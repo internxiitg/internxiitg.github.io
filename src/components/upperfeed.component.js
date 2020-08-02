@@ -1,14 +1,9 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
+import ShortenText from '../utils/ShortenText';
+import ToText from '../utils/ToText';
 
-function removeTags(str) {
-  if ((str===null) || (str===''))
-  return 'empty';
-  else
-  str = str.toString();
-  return str.replace( /(<([^>]+)>)/ig, '');
-}
 
 function getMonthName(num){
   switch(num){
@@ -109,9 +104,9 @@ class Feed extends React.Component {
           <div onClick={e=>(window.location=this.state.post1.link)} className="up1-image" style={{ backgroundImage: 'url(' + this.state.post1.thumbnail + ')' }}></div>
           <a class='feedbox-links' href={this.state.post1.link}>
           <div className="up1-content">
-          <div className="up1-title">{this.state.post1.title}</div>
+          <div className="up1-title">{ShortenText(this.state.post1.title, 0, 50)}</div>
             <div className="up1-author">{this.state.post1.author}</div>
-            <div className="up1-desc">{removeTags(this.state.post1.content).substring(0, 400) + "...."}</div>
+            <div className="up1-desc">{ShortenText(ToText(this.state.post1.content), 0, 400) + '...'}</div>
             <div className="up1-author-date">
               <div className="up1-author2">{this.state.post1.author}</div>
               <div className="up1-date">{convertDate(this.state.post1.pubDate)}</div>
@@ -123,8 +118,8 @@ class Feed extends React.Component {
         <div className="up-2">
           <div onClick={e=>(window.location=this.state.post2.link)} className="up2-image" style={{ backgroundImage: 'url(' + this.state.post2.thumbnail + ')' }}></div>
           <a class='feedbox-links' href={this.state.post2.link}>
-          <div className="up2-content"><div className="up2-title">{this.state.post2.title}</div>
-            <div className="up2-desc">{removeTags(this.state.post2.content).substring(0, 300) + "...."}</div>
+          <div className="up2-content"><div className="up2-title">{ShortenText(this.state.post2.title, 0, 50)}</div>
+            <div className="up2-desc">{ShortenText(ToText(this.state.post2.content), 0, 320) + '...'}</div>
           </div>
           <div className="up2-author-date">
             <div className="up2-author" >
@@ -140,8 +135,8 @@ class Feed extends React.Component {
         <div className="up-2">
           <div onClick={e=>(window.location=this.state.post3.link)} className="up2-image" style={{ backgroundImage: 'url(' + this.state.post3.thumbnail + ')' }}></div>
           <a class='feedbox-links' href={this.state.post3.link}>
-          <div className="up2-content"><div className="up2-title">{this.state.post3.title}</div>
-            <div className="up2-desc">{removeTags(this.state.post3.content).substring(0, 300) + "...."}</div>
+          <div className="up2-content"><div className="up2-title">{ShortenText(this.state.post3.title, 0, 50)}</div>
+            <div className="up2-desc">{ShortenText(ToText(this.state.post3.content), 0, 320) + '...'}</div>
           </div>
           <div className="up2-author-date">
             <div className="up2-author" >
