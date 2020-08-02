@@ -2,7 +2,6 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 
-
 function removeTags(str) {
   if ((str===null) || (str===''))
   return 'empty';
@@ -37,7 +36,7 @@ function convertDate(pdate) {
   
 }
 
-class UpperFeed extends React.Component {
+class Feed extends React.Component {
 
   constructor(props) {
     super(props);
@@ -161,4 +160,4 @@ class UpperFeed extends React.Component {
   }
 }
 
-export default UpperFeed;
+export default Feed;
