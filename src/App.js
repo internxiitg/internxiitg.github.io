@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
       <Router>
 
-          <div className="navbar navbar-expand-sm">
+          <div className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
             <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
               <span className="navbar-toggler-icon"></span>
             </button>
