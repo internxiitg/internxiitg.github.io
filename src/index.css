@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-
 html {
   scroll-behavior: smooth;
 }
@@ -18,6 +17,62 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.search-box {
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  color: #2f3542;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .searchfeed-container {
+    margin-top: 100px;
+  }
+}
+
+.searchfeed-heading {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .searchfeed-heading {
+    margin-top: -70px;
+    font-size: 16px;
+    margin-bottom: 80px;
+  }
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  .search-box {
+    height: 40px;
+    width: 30%;
+    font-size: 16px;
+    color: #2f3542;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+  }
+}
+
+.search-box:focus {
+  outline: none;
 }
 
 .footer-box {
@@ -61,6 +116,7 @@ code {
     text-align: center;
   }
 }
+
 @media only screen and (min-width: 600px) {
   .navlink-container {
     text-align: right;
@@ -84,7 +140,7 @@ code {
   }
 }
 
-.navbar{
+.navbar {
   background-color: #1e272e;
 }
 
@@ -92,12 +148,6 @@ code {
   color: white;
   font-weight: bold;
   font-size: 20px;
-}
-
-.navbar-brand{
-  height:50px;
-  width: 40px;
-  margin-left: 50px;
 }
 
 .navbar-title:hover {
@@ -112,7 +162,7 @@ code {
   transition-duration: 0.4s;
 }
 
-.navbar-nav{
+.navbar-nav {
   margin-right: 100px;
 }
 
@@ -135,7 +185,7 @@ code {
   .header-box {
     padding-top: 100px;
     padding-bottom: 30px;
-    background-color: #6ED974;
+    background-color: #6EC970;
     border-bottom: 1px solid grey;
   }
 }

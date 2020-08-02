@@ -1,0 +1,8 @@
+        <div className='header-buttons container'>
+            <button onClick={this.onClickButton2019} className='button1 button2019'>
+              2019
+          </button>
+            <button onClick={this.onClickButton2020} className='button1 button2020'>
+              2020
+          </button>
+          </div>
