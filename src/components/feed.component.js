@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function removeTags(str) {
     if ((str === null) || (str === ''))
-        return 'empty';
+        return 'Loading Content...';
     else
         str = str.toString();
     return str.replace(/(<([^>]+)>)/ig, '');
@@ -44,7 +44,27 @@ class Feed extends React.Component {
 
     componentDidMount() {
         axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fthe-internship-experience-iit-guwahati')
-            .then(response => {
+        .then(response => {
+
+            if(this.props.year == 2019){
+                var startDate = new Date("2019-01-01");
+                var endDate = new Date("2019-12-31");
+                
+                response.data.items = response.data.items.filter(a => {
+                  var date = new Date(a.pubDate);
+                  return (date >= startDate && date <= endDate);
+                });
+              }
+              else if(this.props.year == 2020){
+                var startDate = new Date("2020-01-01");
+                var endDate = new Date("2020-12-31");
+                
+                response.data.items = response.data.items.filter(a => {
+                  var date = new Date(a.pubDate);
+                  return (date >= startDate && date <= endDate);
+                });
+        
+              }
                 this.setState({ posts: response.data.items });
             }).catch(err => {
                 console.log(err);

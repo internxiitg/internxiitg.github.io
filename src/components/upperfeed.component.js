@@ -13,18 +13,18 @@ function removeTags(str) {
 
 function getMonthName(num){
   switch(num){
-      case 1: return 'Jan';
-      case 2: return 'Feb';
-      case 3: return 'March';
-      case 4: return 'April';
-      case 5: return 'May';
-      case 6: return 'June';
-      case 7: return 'July';
-      case 8: return 'Aug';
-      case 9: return 'Sep';
-      case 10: return 'Oct';
-      case 11: return 'Nov';
-      case 12: return 'Dec';
+      case 0: return 'Jan';
+      case 1: return 'Feb';
+      case 2: return 'March';
+      case 3: return 'April';
+      case 4: return 'May';
+      case 5: return 'June';
+      case 6: return 'July';
+      case 7: return 'Aug';
+      case 8: return 'Sep';
+      case 9: return 'Oct';
+      case 10: return 'Nov';
+      case 11: return 'Dec';
   }
 }
 
@@ -74,6 +74,27 @@ class UpperFeed extends React.Component {
   componentDidMount() {
     axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fthe-internship-experience-iit-guwahati')
     .then(response => {
+
+      if(this.props.year == 2019){
+        var startDate = new Date("2019-01-01");
+        var endDate = new Date("2019-12-31");
+        
+        response.data.items = response.data.items.filter(a => {
+          var date = new Date(a.pubDate);
+          return (date >= startDate && date <= endDate);
+        });
+      }
+      else if(this.props.year == 2020){
+        var startDate = new Date("2020-01-01");
+        var endDate = new Date("2020-12-31");
+        
+        response.data.items = response.data.items.filter(a => {
+          var date = new Date(a.pubDate);
+          return (date >= startDate && date <= endDate);
+        });
+
+      }
+
         this.setState({ post1: response.data.items[0], post2:response.data.items[1], post3: response.data.items[2] });
       }).catch(err => {
         console.log(err);

@@ -6,7 +6,31 @@ import UpperFeed from './components/upperfeed.component';
 import Feed from './components/feed.component';
 
 class App extends React.Component {
+
+  constructor(props){
+      super(props);
+      this.state = {
+        year:9999
+      }
+
+      this.onClickButton2019 = this.onClickButton2019.bind(this);
+      this.onClickButton2020 = this.onClickButton2020.bind(this);
+
+  }
+
+  onClickButton2019(e){
+    console.log("button 2019 clicked")
+      this.setState({year:2019});
+  }
+
+  onClickButton2020(e){
+    console.log("button 2020 clicked")
+    this.setState({year:2020});
+  }
+
   render() {
+    console.log("year:" + this.state.year);
+
     return (
       <Router>
         <div className='navclass container-fluid'>   
@@ -24,17 +48,17 @@ class App extends React.Component {
             <div className="empty-container"></div>
           </div>
           <div className='header-buttons container'>
-            <button className='button1 button2019'>
+            <button onClick={this.onClickButton2019} className='button1 button2019'>
               2019
           </button>
-            <button className='button1 button2020'>
+            <button onClick={this.onClickButton2020} className='button1 button2020'>
               2020
           </button>
           </div>
         </div>
 
-        <UpperFeed />
-        <Feed />
+        <UpperFeed year={this.state.year} key={this.state.year + 1} />
+        <Feed year={this.state.year} key={this.state.year + 2} />
 
         <div className='footer-box unselectable'>
           The Internship Experience ©
