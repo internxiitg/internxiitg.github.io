@@ -19,7 +19,7 @@ const FeedCard = props =>{
             <div className="feedbox-title">{ShortenText(props.post.title, 0, 50)}</div>
             <div className="feedbox-desc">{ShortenText(ToText(props.post.content), 0, 320) + '...'}</div>
             <div className="feedbox-author-date">
-                <div className="feedbox-author">{props.post.author}</div>
+                <div className="feedbox-author">By {props.post.author}</div>
             <div className="feedbox-date">{publishDate}</div>
             </div>
         </div>

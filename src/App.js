@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import UpperFeed from './components/upperfeed.component';
 import Feed from './components/feed.component';
 
@@ -33,11 +34,22 @@ class App extends React.Component {
 
     return (
       <Router>
-        <div className='navclass container-fluid'>  
-            <div className='navlink-container'>
-              <Link to='/' className='navlinks unselectable mr-4'>Home</Link>
-              <Link to='/' className='navlinks unselectable'>About</Link>
-            </div>
+
+          <div className="navbar navbar-expand-sm">
+            <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarMenu">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+              <Link to='/' className='unselectable nav-link navlinks active'>Home</Link>
+              </li>
+              <li className="nav-item">
+              <Link to='/' className='unselectable nav-link navlinks active'>About</Link>
+              </li>
+            </ul>
+            </div> 
+
           </div>
         <div className="header-box container-fluid unselectable">
           <div className="header-container">

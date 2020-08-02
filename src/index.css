@@ -61,7 +61,6 @@ code {
     text-align: center;
   }
 }
-
 @media only screen and (min-width: 600px) {
   .navlink-container {
     text-align: right;
@@ -85,10 +84,20 @@ code {
   }
 }
 
+.navbar{
+  background-color: #1e272e;
+}
+
 .navbar-title {
   color: white;
   font-weight: bold;
   font-size: 20px;
+}
+
+.navbar-brand{
+  height:50px;
+  width: 40px;
+  margin-left: 50px;
 }
 
 .navbar-title:hover {
@@ -99,8 +108,12 @@ code {
 .navlinks {
   color: white;
   font-weight: bold;
-  font-size: 15px;
+  font-family: 'Lato', sans-serif;
   transition-duration: 0.4s;
+}
+
+.navbar-nav{
+  margin-right: 100px;
 }
 
 .navlinks:hover {

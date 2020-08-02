@@ -105,7 +105,7 @@ class Feed extends React.Component {
           <a class='feedbox-links' href={this.state.post1.link}>
           <div className="up1-content">
           <div className="up1-title">{ShortenText(this.state.post1.title, 0, 50)}</div>
-            <div className="up1-author">{this.state.post1.author}</div>
+            <div className="up1-author">By {this.state.post1.author}</div>
             <div className="up1-desc">{ShortenText(ToText(this.state.post1.content), 0, 400) + '...'}</div>
             <div className="up1-author-date">
               <div className="up1-author2">{this.state.post1.author}</div>
@@ -123,7 +123,7 @@ class Feed extends React.Component {
           </div>
           <div className="up2-author-date">
             <div className="up2-author" >
-            {this.state.post2.author}
+            By {this.state.post2.author}
               </div>
             <div className="up2-date">
             {convertDate(this.state.post2.pubDate)}
@@ -140,7 +140,7 @@ class Feed extends React.Component {
           </div>
           <div className="up2-author-date">
             <div className="up2-author" >
-            {this.state.post3.author}
+            By {this.state.post3.author}
               </div>
             <div className="up2-date">
             {convertDate(this.state.post3.pubDate)}
