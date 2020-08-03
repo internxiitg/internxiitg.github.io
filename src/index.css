@@ -877,7 +877,10 @@ code {
     background-color: white;
     padding: 10%;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 10%;
+    padding-top:20%;
+    margin-bottom: -100px;
+    padding-bottom: 30%;
   }
 }
 
