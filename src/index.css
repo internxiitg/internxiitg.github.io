@@ -364,6 +364,16 @@ code {
   .upperfeed-box {
     display: grid;
     margin-top: 30px;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .upperfeed-box {
+    display: grid;
+    margin-top: 30px;
     grid-template-columns: 2fr 1.2fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 1em;
@@ -384,6 +394,24 @@ code {
 }
 
 @media only screen and (min-width: 600px) {
+  .up-1 {
+    grid-row: 1/3;
+    background-color: white;
+    height: minmax(360, auto);
+    border: 1px grey solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 250px auto;
+    transition: all 0.5s ease;
+  }
+  .up-1:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
   .up-1 {
     grid-row: 1/3;
     background-color: white;
@@ -728,6 +756,21 @@ code {
 }
 
 @media only screen and (min-width: 600px) {
+  .feed-box {
+    background-color: white;
+    border: 1px grey solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto 200px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
   .feed-box {
     background-color: white;
     border: 1px grey solid;
