@@ -70,9 +70,6 @@ class Feed extends React.Component {
               </div>
               <div className="empty-container"></div>
             </div>
-            <form>
-              <input value={this.SearchText} onChange={this.onChangeSearchText} type='text' className='search-box' placeholder='Search By Category (Ex. AI, Finance)'></input>
-            </form>
           </div>
   
           <UpperFeed year={this.state.year} key={this.state.year + 1} />

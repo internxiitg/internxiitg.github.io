@@ -6,3 +6,8 @@
               2020
           </button>
           </div>
+
+
+          <form>
+              <input value={this.SearchText} onChange={this.onChangeSearchText} type='text' className='search-box' placeholder='Search By Category (Ex. AI, Finance)'></input>
+            </form>
