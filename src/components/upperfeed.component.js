@@ -66,8 +66,7 @@ class UpperFeed extends React.Component {
 
 
   componentDidMount() {
-    axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fthe-internship-experience-iit-guwahati&api_key=rqdiqvlexsqeiewqodougravnnlbv1aa1g4hnvzw')
-    .then(response => {
+    axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fthe-internship-experience-iit-guwahati&api_key=rqdiqvlexsqeiewqodougravnnlbv1aa1g4hnvzw&count=100').then(response => {
 
       if(this.props.year == 2019){
         var startDate = new Date("2019-01-01");

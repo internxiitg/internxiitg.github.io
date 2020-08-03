@@ -41,8 +41,8 @@ class SearchFeed extends React.Component {
     componentDidMount() {
         console.log("searchfeed got loaded");
 
-        axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fthe-internship-experience-iit-guwahati&api_key=rqdiqvlexsqeiewqodougravnnlbv1aa1g4hnvzw')
-            .then(response => {
+        axios.get(' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fthe-internship-experience-iit-guwahati&api_key=rqdiqvlexsqeiewqodougravnnlbv1aa1g4hnvzw&count=100')
+         .then(response => {
                 let new_posts = [];
                 for (var p of response.data.items) {
                     p.categories = p.categories.join(",").split("-").join(" ").split(",");
