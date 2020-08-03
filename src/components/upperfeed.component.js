@@ -108,7 +108,7 @@ class UpperFeed extends React.Component {
             <div className="up1-author">By {this.state.post1.author}</div>
             <div className="up1-desc">{ShortenText(ToText(this.state.post1.content), 0, 400) + '...'}</div>
             <div className="up1-author-date">
-              <div className="up1-author2">{this.state.post1.author}</div>
+              <div className="up1-author2">By {this.state.post1.author}</div>
               <div className="up1-date">{convertDate(this.state.post1.pubDate)}</div>
             </div>
           </div>
