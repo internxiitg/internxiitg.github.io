@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import logo from  './utils/logo.jpg'
 import Feed from './components/feed.component';
 import About from './components/about.component';
 
@@ -13,6 +13,7 @@ class App extends React.Component {
     return (<Router>
 
       <div className="navbar navbar-expand-sm fixed-top">
+        <div className="navbar-brand"><img className="logo-img" src={logo}></img></div>
         <button className="navbar-toggler ml-auto" data-toggle="collapse" data-target="#navbarMenu">
           <i class="hambur fas fa-bars"></i>
         </button>

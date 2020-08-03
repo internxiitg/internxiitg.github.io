@@ -40,7 +40,7 @@ class About extends React.Component {
                         </div>
                         <div className="team-member">
                             <div className="team-img-container"><img className="team-img" src={smita_image}></img></div>
-                            <div className="member-name">Smita Saxna</div>
+                            <div className="member-name">Smita Saxena</div>
                             <div className="member-desc">Pre-final Year, IIT Guwahati</div>
                             <div className="member-social">
                             <a href="https://www.linkedin.com/in/smita-saxena11/"><i class="fa fa-linkedin member-social-i" aria-hidden="true"></i></a>

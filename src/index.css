@@ -19,6 +19,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.logo-img {
+  height: 40px;
+  width: 40px;
+  margin-left: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo-img {
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+  }
+}
+
 .search-box {
   height: 50px;
   width: 100%;
@@ -863,7 +877,7 @@ code {
     background-color: white;
     padding: 10%;
     text-align: center;
-    margin-top:10%;
+    margin-top: 10%;
   }
 }
 
