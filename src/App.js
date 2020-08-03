@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from  './utils/logo2.jpg'
+import logo from  './utils/logo.jpg'
 import Feed from './components/feed.component';
 import About from './components/about.component';
 
@@ -40,8 +40,5 @@ class App extends React.Component {
   }
 
 }
-
-
-
 
 export default App;

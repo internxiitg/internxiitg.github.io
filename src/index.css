@@ -220,23 +220,12 @@ code {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 600px) {
-  .header-box {
-    padding-top: 100px;
-    padding-bottom: 30px;
-    background-image: url('https://i.imgur.com/V38DezE.png');
-    background-size: cover;
-    border-bottom: 1px solid grey;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .header-box {
-    padding-top: 100px;
-    padding-bottom: 30px;
-    background-color: #2DD881;
-    border-bottom: 1px solid grey;
-  }
+.header-box {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  background-image: url('https://i.imgur.com/V38DezE.png');
+  background-size: cover;
+  border-bottom: 1px solid grey;
 }
 
 @media only screen and (max-width: 600px) {
@@ -921,7 +910,7 @@ code {
     padding: 10%;
     text-align: center;
     margin-top: 10%;
-    padding-top:20%;
+    padding-top: 20%;
     margin-bottom: -100px;
     padding-bottom: 30%;
   }
