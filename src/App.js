@@ -20,7 +20,7 @@ class App extends React.Component {
         <div className="collapse navbar-collapse" id="navbarMenu">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link to='/internship-exp-react/' className='unselectable nav-link navlinks active'>Home</Link>
+              <Link to='/' className='unselectable nav-link navlinks active'>Home</Link>
             </li>
             <li className="nav-item">
               <Link to='/about' className='unselectable nav-link navlinks active'>About</Link>
@@ -29,7 +29,7 @@ class App extends React.Component {
         </div>
       </div>
 
-      <Route path="/internship-exp-react/" exact component={Feed} />
+      <Route path="/" exact component={Feed} />
       <Route path="/about" exact component={About} />
 
       <div className='footer-box unselectable'>
