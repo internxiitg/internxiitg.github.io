@@ -73,7 +73,7 @@ class LowerFeed extends React.Component {
 
     render() {
         return (<div className="container">
-            <div className="feed-heading">LATEST</div>
+            <div className="feed-heading">MORE STORIES</div>
             <div className="feed-container">
                 {this.postCards()}
             </div>
