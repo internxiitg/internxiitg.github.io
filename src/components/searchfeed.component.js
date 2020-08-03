@@ -14,7 +14,7 @@ const FeedCard = props => {
     const publishDate = shortMonthName(date) + ' ' + date.getDate() + ',' + ' ' + date.getFullYear();
 
     return (
-        <a class='feedbox-links' href={props.post.link}><div className="feed-box">
+        <a class='feedbox-links' href={props.post.link} target="_blank"><div className="feed-box">
             <div className="feedbox-content">
                 <div className="feedbox-title">{ShortenText(props.post.title, 0, 50)}</div>
                 <div className="feedbox-desc">{ShortenText(ToText(props.post.content), 0, 320) + '...'}</div>

@@ -101,7 +101,7 @@ class UpperFeed extends React.Component {
       <div className="upperfeed-box unselectable">
         <div className="up-1">    
           <div onClick={e=>(window.location=this.state.post1.link)} className="up1-image" style={{ backgroundImage: 'url(' + this.state.post1.thumbnail + ')' }}></div>
-          <a class='feedbox-links' href={this.state.post1.link}>
+          <a class='feedbox-links' href={this.state.post1.link} target="_blank">
           <div className="up1-content">
           <div className="up1-title">{ShortenText(this.state.post1.title, 0, 50)}</div>
             <div className="up1-author">By {this.state.post1.author}</div>
@@ -116,7 +116,7 @@ class UpperFeed extends React.Component {
 
         <div className="up-2">
           <div onClick={e=>(window.location=this.state.post2.link)} className="up2-image" style={{ backgroundImage: 'url(' + this.state.post2.thumbnail + ')' }}></div>
-          <a class='feedbox-links' href={this.state.post2.link}>
+          <a class='feedbox-links' href={this.state.post2.link} target="_blank">
           <div className="up2-content"><div className="up2-title">{ShortenText(this.state.post2.title, 0, 50)}</div>
             <div className="up2-desc">{ShortenText(ToText(this.state.post2.content), 0, 320) + '...'}</div>
           </div>
@@ -133,7 +133,7 @@ class UpperFeed extends React.Component {
         
         <div className="up-2">
           <div onClick={e=>(window.location=this.state.post3.link)} className="up2-image" style={{ backgroundImage: 'url(' + this.state.post3.thumbnail + ')' }}></div>
-          <a class='feedbox-links' href={this.state.post3.link}>
+          <a class='feedbox-links' href={this.state.post3.link} target="_blank">
           <div className="up2-content"><div className="up2-title">{ShortenText(this.state.post3.title, 0, 50)}</div>
             <div className="up2-desc">{ShortenText(ToText(this.state.post3.content), 0, 320) + '...'}</div>
           </div>
