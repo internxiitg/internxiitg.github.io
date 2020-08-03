@@ -46,15 +46,11 @@ class SearchFeed extends React.Component {
                 let new_posts = [];
                 for (var p of response.data.items) {
                     p.categories = p.categories.join(",").split("-").join(" ").split(",");
-                    console.log(p.categories);
                     if (p.categories.includes(this.props.searchtext.toLowerCase().trim())) {
                         new_posts.push(p);
                     }
                 }
-                console.log("----------");
-                console.log(response.data.items);
-                console.log(new_posts);
-                console.log("----------");
+                
 
                 this.setState({ posts: new_posts });
             }).catch(err => {
@@ -80,7 +76,8 @@ class SearchFeed extends React.Component {
         else {
             return (
                 <div className="container">
-                    <div className="searchfeed-heading">SEARCH RESULTS</div><div className="noresults">
+                    <div className="searchfeed-heading">SEARCH RESULTS</div>
+                    <div className="noresults">
                         No results found :(
             </div>
                 </div>)

@@ -31,7 +31,7 @@ function convertDate(pdate) {
   
 }
 
-class Feed extends React.Component {
+class UpperFeed extends React.Component {
 
   constructor(props) {
     super(props);
@@ -155,4 +155,4 @@ class Feed extends React.Component {
   }
 }
 
-export default Feed;
+export default UpperFeed;
