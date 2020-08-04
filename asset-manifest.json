@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2ebbacea.chunk.css",
+    "main.js": "/static/js/main.024813bb.chunk.js",
+    "main.js.map": "/static/js/main.024813bb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.0014abaa.chunk.js": "/static/js/2.0014abaa.chunk.js",
+    "static/js/2.0014abaa.chunk.js.map": "/static/js/2.0014abaa.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c099e95ce2d3d2501d0b044a4a3bf5f8.js": "/precache-manifest.c099e95ce2d3d2501d0b044a4a3bf5f8.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.2ebbacea.chunk.css.map": "/static/css/main.2ebbacea.chunk.css.map",
+    "static/js/2.0014abaa.chunk.js.LICENSE.txt": "/static/js/2.0014abaa.chunk.js.LICENSE.txt",
+    "static/media/aniket_image.jpeg": "/static/media/aniket_image.211e266c.jpeg",
+    "static/media/aryan_image.jpg": "/static/media/aryan_image.0113d199.jpg",
+    "static/media/logo2.jpg": "/static/media/logo2.2fdd824e.jpg",
+    "static/media/smita_image.jpeg": "/static/media/smita_image.6c63d14c.jpeg",
+    "static/media/utkarsh_image.jpeg": "/static/media/utkarsh_image.9ff8cecd.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09b85ec0.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.0014abaa.chunk.js",
+    "static/css/main.2ebbacea.chunk.css",
+    "static/js/main.024813bb.chunk.js"
+  ]
+}
