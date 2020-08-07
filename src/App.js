@@ -30,8 +30,8 @@ class App extends React.Component {
         </div>
       </div>
 
-      <Route path="/" exact component={Feed} />
       <Route path="/about" exact component={About} />
+      <Route path="/" component={Feed} />
 
       <div className='footer-box unselectable'>
         The Internship Experience ©
