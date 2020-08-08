@@ -14,7 +14,7 @@ class App extends React.Component {
     return (<Router>
 
       <div className="navbar navbar-expand-sm fixed-top">
-        <div className="navbar-brand"><Link to='/' className='unselectable nav-link navlinks active'><img className="logo-img" src={logo}></img></Link></div>
+        <div className="navbar-brand"><img className="logo-img" src={logo}></img></div>
         <button className="navbar-toggler ml-auto" data-toggle="collapse" data-target="#navbarMenu">
           <i class="hambur fas fa-bars"></i>
         </button>
