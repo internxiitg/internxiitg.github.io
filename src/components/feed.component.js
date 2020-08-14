@@ -65,8 +65,8 @@ class Feed extends React.Component {
           <div className="header-box container-fluid unselectable">
             <div className="header-container">
               <div className="header-title-intro">
-                <div className="title-header">The Internship Experience</div>
-                <div className="intro-header">The Internship Experience brings the truest stories from students interning in diverse streams, from Billion dollar MNCs to hottest startups, Foreign universities to Indian research.</div>
+                <div className="title-header">The Internship Experience IITG</div>
+                <div className="intro-header">The Internship Experience IITG brings the truest stories from students interning in diverse streams, from Billion dollar MNCs to hottest startups, Foreign universities to Indian research.</div>
               </div>
               <div className="empty-container"></div>
             </div>
